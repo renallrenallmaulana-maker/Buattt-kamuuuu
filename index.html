@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, Birthday Sayanggg 🎀</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;1,700&display=swap');
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    min-height:100vh;
+    background:
+      radial-gradient(circle at 50% 0%,#7b315b 0%,transparent 35%),
+      radial-gradient(circle at 10% 80%,#3b1837 0%,transparent 30%),
+      #0b0710;
+    color:white;
+    font-family:"DM Sans",sans-serif;
+    overflow-x:hidden;
+}
+
+/* ================= INTRO ================= */
+
+#intro{
+    position:fixed;
+    inset:0;
+    z-index:100;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:
+      radial-gradient(circle,#632b4b,#0b0710 70%);
+    transition:1s ease;
+}
+
+#intro.hide{
+    opacity:0;
+    pointer-events:none;
+}
+
+.envelope{
+    width:min(390px,82vw);
+    height:270px;
+    position:relative;
+    cursor:pointer;
+    filter:drop-shadow(0 30px 45px rgba(0,0,0,.6));
+    transition:.8s;
+}
+
+.paper{
+    position:absolute;
+    inset:20px;
+    background:linear-gradient(135deg,#fff,#ffe4ef);
+    color:#5a2041;
+    border-radius:12px;
+    text-align:center;
+    padding-top:60px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    z-index:1;
+}
+
+.paper b{
+    font-size:11px;
+    letter-spacing:5px;
+}
+
+.paper strong{
+    font:italic 38px "Playfair Display",serif;
+}
+
+.paper small{
+    color:#b85b88;
+}
+
+.envelope::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(145deg,#eca5c5,#984568);
+    clip-path:polygon(
+        0 0,
+        50% 55%,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+    border-radius:12px;
+    z-index:2;
+}
+
+.seal{
+    position:absolute;
+    z-index:5;
+    left:50%;
+    top:52%;
+    transform:translate(-50%,-50%);
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:#ffafd3;
+    color:#70264d;
+    font-size:27px;
+    box-shadow:0 0 30px #ff8fc5;
+}
+
+/* ================= MAIN ================= */
+
+main{
+    width:min(850px,92%);
+    margin:auto;
+    padding:30px 0 70px;
+    opacity:0;
+    transform:translateY(40px);
+    transition:1.2s ease;
+}
+
+main.show{
+    opacity:1;
+    transform:none;
+}
+
+header{
+    min-height:75vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+header span,
+.label{
+    font-size:10px;
+    letter-spacing:4px;
+    color:#f5a8cc;
+    font-weight:bold;
+}
+
+h1{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(52px,11vw,100px);
+    line-height:.9;
+    margin:22px 0;
+}
+
+h1 em{
+    color:#ffacd0;
+}
+
+header p{
+    color:#cdb8c7;
+}
+
+/* ================= CARD ================= */
+
+.card{
+    margin:25px 0;
+    padding:38px 25px;
+    text-align:center;
+    border-radius:30px;
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.13);
+    backdrop-filter:blur(18px);
+    box-shadow:0 30px 80px rgba(0,0,0,.45);
+}
+
+h2{
+    font-family:"Playfair Display",serif;
+    font-size:38px;
+    margin:10px 0 15px;
+}
+
+.hint{
+    color:#cdb8c6;
+}
+
+/* ================= CAKE ================= */
+
+.cakebox{
+    height:390px;
+    max-width:470px;
+    position:relative;
+    margin:auto;
+}
+
+.plate{
+    position:absolute;
+    width:90%;
+    height:28px;
+    left:5%;
+    bottom:25px;
+    border-radius:50%;
+    background:#f8c9df;
+    box-shadow:0 15px 30px rgba(0,0,0,.7);
+}
+
+.tier{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    border:3px solid #ffd8e9;
+    background:linear-gradient(#ffcce1,#ed72a9);
+    box-shadow:
+      inset 0 -15px rgba(140,45,95,.35),
+      0 12px 25px rgba(0,0,0,.4);
+}
+
+.tier::before{
+    content:"";
+    position:absolute;
+    left:-3px;
+    right:-3px;
+    top:-10px;
+    height:25px;
+    background:#fff3f8;
+    border-radius:50%;
+    box-shadow:0 5px #f39bc2;
+}
+
+.t1{
+    width:78%;
+    height:105px;
+    bottom:48px;
+    border-radius:18px;
+}
+
+.t2{
+    width:60%;
+    height:85px;
+    bottom:137px;
+    border-radius:17px;
+}
+
+.t3{
+    width:43%;
+    height:68px;
+    bottom:220px;
+    border-radius:16px;
+}
+
+/* CANDLES */
+
+.candles,
+.flames{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:34px;
+}
+
+.candles{
+    bottom:278px;
+    z-index:4;
+}
+
+.candles b{
+    width:12px;
+    height:55px;
+    display:block;
+    border-radius:8px;
+    background:
+      repeating-linear-gradient(
+        45deg,
+        white 0 7px,
+        #ff83b7 7px 14px
+      );
+}
+
+/* FLAMES */
+
+.flames{
+    bottom:329px;
+    z-index:5;
+}
+
+.flames i{
+    width:15px;
+    height:27px;
+    border-radius:50%;
+    background:#ffd55e;
+    box-shadow:
+      0 0 20px 7px #ff9750;
+    animation:flicker .25s infinite alternate;
+}
+
+.flames i:nth-child(2){
+    animation-delay:.08s;
+}
+
+.flames i:nth-child(3){
+    animation-delay:.15s;
+}
+
+@keyframes flicker{
+    from{
+        transform:scale(1);
+    }
+    to{
+        transform:scale(.75) translateY(3px);
+    }
+}
+
+.flames.blown{
+    opacity:0;
+    transform:translateX(-50%) scale(.1);
+    transition:.5s;
+}
+
+/* ================= BUTTON ================= */
+
+button{
+    border:0;
+    cursor:pointer;
+    font-family:inherit;
+}
+
+#blow{
+    padding:14px 25px;
+    border-radius:999px;
+    background:linear-gradient(135deg,#ffc2dc,#d96fa7);
+    color:#351328;
+    font-weight:bold;
+    box-shadow:0 10px 30px rgba(220,90,150,.25);
+    transition:.3s;
+}
+
+#blow:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 40px rgba(255,120,180,.4);
+}
+
+#wish{
+    min-height:30px;
+    margin-top:20px;
+    color:#ffafd1;
+    font-weight:bold;
+}
+
+/* ================= MESSAGE ================= */
+
+#message{
+    min-height:130px;
+    padding:10px 5%;
+    font-size:17px;
+    line-height:1.9;
+    color:#eadde5;
+}
+
+#next{
+    padding:12px 20px;
+    border-radius:999px;
+    color:#ffafd1;
+    background:transparent;
+    border:1px solid rgba(255,255,255,.15);
+}
+
+/* ================= GALLERY ================= */
+
+#gallery{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin-top:25px;
+}
+
+#gallery img{
+    width:100%;
+    aspect-ratio:1;
+    object-fit:cover;
+    border-radius:18px;
+    cursor:pointer;
+    transition:.35s;
+}
+
+#gallery img:hover{
+    transform:scale(1.05);
+    box-shadow:0 15px 35px rgba(0,0,0,.6);
+}
+
+/* ================= LIGHTBOX ================= */
+
+#viewer{
+    position:fixed;
+    inset:0;
+    z-index:200;
+    background:rgba(0,0,0,.9);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+#viewer.show{
+    display:flex;
+}
+
+#bigPhoto{
+    max-width:95%;
+    max-height:88%;
+    border-radius:20px;
+    box-shadow:0 20px 80px black;
+}
+
+#close{
+    position:absolute;
+    right:20px;
+    top:10px;
+    color:white;
+    background:none;
+    font-size:45px;
+}
+
+/* ================= CONFETTI ================= */
+
+.confetti{
+    position:fixed;
+    width:8px;
+    height:8px;
+    z-index:150;
+    border-radius:2px;
+    background:#ffafd2;
+    pointer-events:none;
+    animation:fall 1.8s ease-out forwards;
+}
+
+@keyframes fall{
+    to{
+        opacity:0;
+        transform:
+          translate(var(--x),var(--y))
+          rotate(720deg);
+    }
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    text-align:center;
+    color:#765d6d;
+    padding:30px;
+    font-size:13px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+    .card{
+        padding:30px 15px;
+    }
+
+    h2{
+        font-size:31px;
+    }
+
+    .cakebox{
+        height:350px;
+    }
+
+    .candles,
+    .flames{
+        gap:27px;
+    }
+
+    #gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .paper strong{
+        font-size:31px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= ENVELOPE ================= -->
+
+<div id="intro">
+
+    <div class="envelope" id="envelope">
+
+        <div class="seal">♡</div>
+
+        <div class="paper">
+            <b>FOR MY</b>
+            <strong>BIRTHDAY SAYANGGG</strong>
+            <small>tap to open ✨</small>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= MAIN ================= -->
+
+<main id="main">
+
+<header>
+
+    <span>✦ A SPECIAL DAY ✦</span>
+
+    <h1>
+        Happy Birthday,<br>
+        <em>Birthday Sayanggg</em> 🎀
+    </h1>
+
+    <p>
+        Hari ini semuanya tentang kamu.
+    </p>
+
+</header>
+
+
+<!-- ================= CAKE ================= -->
+
+<section class="card">
+
+    <span class="label">
+        MAKE A WISH
+    </span>
+
+    <h2>
+        One wish. One candle. ✨
+    </h2>
+
+    <p class="hint">
+        Tiup lilinnya atau tekan tombolnya.
+    </p>
+
+
+    <div class="cakebox">
+
+        <div class="flames" id="flames">
+
+            <i></i>
+            <i></i>
+            <i></i>
+
+        </div>
+
+
+        <div class="candles">
+
+            <b></b>
+            <b></b>
+            <b></b>
+
+        </div>
+
+
+        <div class="tier t1"></div>
+
+        <div class="tier t2"></div>
+
+        <div class="tier t3"></div>
+
+        <div class="plate"></div>
+
+    </div>
+
+
+    <button id="blow">
+        💨 Tiup Lilinnya
+    </button>
+
+    <p id="wish"></p>
+
+</section>
+
+
+<!-- ================= MESSAGE ================= -->
+
+<section class="card">
+
+    <span class="label">
+        A LITTLE MESSAGE
+    </span>
+
+    <h2>
+        Untuk Birthday Sayanggg 💌
+    </h2>
+
+    <div id="message"></div>
+
+    <button id="next">
+        Pesan berikutnya →
+    </button>
+
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section class="card">
+
+    <span class="label">
+        OUR MEMORIES
+    </span>
+
+    <h2>
+        Little Moments 📸
+    </h2>
+
+    <div id="gallery"></div>
+
+</section>
+
+
+<footer>
+    made with ♡ for Birthday Sayanggg
+</footer>
+
+</main>
+
+
+<!-- ================= FULLSCREEN PHOTO ================= -->
+
+<div id="viewer">
+
+    <button id="close">
+        ×
+    </button>
+
+    <img id="bigPhoto">
+
+</div>
+
+
+<!-- ================= MUSIC ================= -->
+
+<audio id="music" loop>
+
+    <source
+        src="https://files.catbox.moe/9ahsas.mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+<script>
+
+/* =====================================================
+   FOTO
+===================================================== */
+
+const photos = [
+
+"https://cdn.phototourl.com/free/2026-05-27-951d2859-dee2-46af-81a0-ab6a13889eb8.jpg",
+
+"https://cdn.phototourl.com/free/2026-05-27-5808433a-4b94-4ba2-a621-7dfd243ef7a2.webp",
+
+"https://cdn.phototourl.com/free/2026-05-27-683b95c6-76ff-4ec9-b919-1e55a5700c01.jpg",
+
+"https://cdn.phototourl.com/free/2026-05-27-f73cc85a-3049-4156-bfac-efa1162aad03.jpg",
+
+"https://cdn.phototourl.com/free/2026-05-27-c8eff209-94b0-4ec1-97bd-9fc699e1a856.jpg",
+
+"https://cdn.phototourl.com/free/2026-05-27-ea78b0de-dde5-4301-a950-62aa4fea0ece.jpg",
+
+"https://cdn.phototourl.com/free/2026-05-27-0311fec7-cd95-4296-aa14-2efd6f7b9ea6.jpg",
+
+"https://cdn.phototourl.com/free/2026-05-27-18c97907-789c-4cc2-9ac2-9af7d3ac7915.jpg",
+
+"https://cdn.phototourl.com/free/2026-05-27-71b1329c-fb66-4082-b1f6-179c6ce7fe7b.jpg",
+
+"https://cdn.phototourl.com/free/2026-05-27-75b1ce88-7d01-4367-8b37-d84747a383ef.jpg",
+
+"https://cdn.phototourl.com/member/2026-05-27-76db9bb8-ea92-4b8f-ac97-a6bec325f28a.jpg",
+
+"https://cdn.phototourl.com/member/2026-05-27-080ee317-db04-4120-ab58-1980b12ff560.jpg",
+
+"https://cdn.phototourl.com/member/2026-05-27-7b842824-2cd8-4b8d-837e-50611cb6419f.jpg",
+
+"https://cdn.phototourl.com/member/2026-05-27-1f849887-2cd5-4b06-ac38-59b985f38832.webp",
+
+"https://cdn.phototourl.com/member/2026-05-27-3a3cfd13-b189-42e7-b889-68f17e2d9ee3.webp",
+
+"https://cdn.phototourl.com/member/2026-05-27-03265d74-880c-490b-95ce-130e0626cc24.jpg",
+
+"https://cdn.phototourl.com/member/2026-05-27-2c234268-f215-409b-9967-2d7671a83972.jpg",
+
+"https://cdn.phototourl.com/member/2026-05-27-c8f3f7c2-53f3-4fb9-8bfb-63a46aae8844.jpg"
+
+];
+
+
+/* =====================================================
+   PESAN
+===================================================== */
+
+const messages = [
+
+"Selamat ulang tahun, Birthday Girl 🎀 Semoga hari ini penuh senyum, kejutan kecil, dan orang-orang yang membuatmu bahagia.",
+
+"Semoga semua doa baik yang kamu simpan pelan-pelan menemukan jalannya. Jangan berhenti bermimpi dan jangan lupa menikmati setiap prosesnya. ✨",
+
+"Terima kasih sudah menjadi seseorang yang begitu spesial. Semoga tahun baru dalam hidupmu membawa lebih banyak cerita indah. 💗",
+
+"Last message: tetap jadi kamu yang ceria, kuat, dan punya banyak alasan untuk tersenyum. Happy Birthday, Birthday Girl! 🎂"
+
+];
+
+
+let messageIndex = 0;
+let blown = false;
+
+
+/* =====================================================
+   OPEN ENVELOPE
+===================================================== */
+
+const envelope =
+document.getElementById("envelope");
+
+const intro =
+document.getElementById("intro");
+
+const main =
+document.getElementById("main");
+
+const music =
+document.getElementById("music");
+
+
+envelope.onclick = function(){
+
+    intro.classList.add("hide");
+
+    setTimeout(function(){
+
+        main.classList.add("show");
+
+    },500);
+
+
+    music.play().catch(function(){});
+
+    typeMessage(messages[0]);
+
+};
+
+
+/* =====================================================
+   TYPEWRITER
+===================================================== */
+
+function typeMessage(text){
+
+    const element =
+    document.getElementById("message");
+
+    element.textContent = "";
+
+    let i = 0;
+
+    const timer =
+    setInterval(function(){
+
+        element.textContent +=
+        text[i] || "";
+
+        i++;
+
+        if(i > text.length){
+
+            clearInterval(timer);
+
+        }
+
+    },25);
+
+}
+
+
+/* =====================================================
+   NEXT MESSAGE
+===================================================== */
+
+document.getElementById("next").onclick =
+function(){
+
+    messageIndex++;
+
+    if(messageIndex >= messages.length){
+
+        messageIndex = 0;
+
+    }
+
+    typeMessage(messages[messageIndex]);
+
+};
+
+
+/* =====================================================
+   BLOW CANDLE
+===================================================== */
+
+document.getElementById("blow").onclick =
+function(){
+
+    if(blown) return;
+
+    blown = true;
+
+    document
+    .getElementById("flames")
+    .classList
+    .add("blown");
+
+
+    document
+    .getElementById("wish")
+    .textContent =
+    "✨ Wish granted! Semoga semua doa baiknya terkabul. ✨";
+
+
+    createConfetti();
+
+};
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+function createConfetti(){
+
+    for(let i=0;i<60;i++){
+
+        const confetti =
+        document.createElement("div");
+
+        confetti.className =
+        "confetti";
+
+        confetti.style.left =
+        "50%";
+
+        confetti.style.top =
+        "45%";
+
+        confetti.style.setProperty(
+            "--x",
+            (Math.random()-0.5)*600 + "px"
+        );
+
+        confetti.style.setProperty(
+            "--y",
+            (Math.random()-0.5)*600 + "px"
+        );
+
+        confetti.style.background =
+        [
+            "#ffafd2",
+            "#ffd6e8",
+            "#ffffff",
+            "#e986b6",
+            "#f8c6dc"
+        ][Math.floor(Math.random()*5)];
+
+
+        document.body.appendChild(confetti);
+
+
+        setTimeout(function(){
+
+            confetti.remove();
+
+        },1900);
+
+    }
+
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+const gallery =
+document.getElementById("gallery");
+
+
+photos.forEach(function(photo,index){
+
+    const image =
+    document.createElement("img");
+
+    image.src = photo;
+
+    image.alt =
+    "Memory " + (index + 1);
+
+    image.loading =
+    "lazy";
+
+
+    image.onclick =
+    function(){
+
+        document
+        .getElementById("bigPhoto")
+        .src = photo;
+
+        document
+        .getElementById("viewer")
+        .classList
+        .add("show");
+
+    };
+
+
+    gallery.appendChild(image);
+
+});
+
+
+/* =====================================================
+   CLOSE PHOTO
+===================================================== */
+
+document.getElementById("close").onclick =
+function(){
+
+    document
+    .getElementById("viewer")
+    .classList
+    .remove("show");
+
+};
+
+
+document.getElementById("viewer").onclick =
+function(event){
+
+    if(event.target === this){
+
+        this.classList.remove("show");
+
+    }
+
+};
+
+
+/* =====================================================
+   MICROPHONE BLOW DETECTION
+===================================================== */
+
+async function detectBlow(){
+
+    try{
+
+        const stream =
+        await navigator.mediaDevices
+        .getUserMedia({audio:true});
+
+
+        const audioContext =
+        new (
+            window.AudioContext ||
+            window.webkitAudioContext
+        )();
+
+
+        const analyser =
+        audioContext.createAnalyser();
+
+        analyser.fftSize = 512;
+
+
+        const source =
+        audioContext
+        .createMediaStreamSource(stream);
+
+
+        source.connect(analyser);
+
+
+        const data =
+        new Uint8Array(
+            analyser.frequencyBinCount
+        );
+
+
+        function listen(){
+
+            if(blown) return;
+
+
+            analyser
+            .getByteTimeDomainData(data);
+
+
+            let sum = 0;
+
+
+            for(let i=0;i<data.length;i++){
+
+                const value =
+                (data[i]-128)/128;
+
+                sum += value*value;
+
+            }
+
+
+            const volume =
+            Math.sqrt(sum/data.length);
+
+
+            if(volume > 0.18){
+
+                document
+                .getElementById("blow")
+                .click();
+
+            }
+
+
+            requestAnimationFrame(listen);
+
+        }
+
+
+        listen();
+
+    }catch(error){
+
+        console.log(
+            "Microphone tidak tersedia."
+        );
+
+    }
+
+}
+
+
+/*
+   Aktifkan deteksi mikrofon
+   setelah pengguna membuka amplop.
+*/
+
+envelope.addEventListener(
+    "dblclick",
+    detectBlow
+);
+
+</script>
+
+</body>
+</html>
